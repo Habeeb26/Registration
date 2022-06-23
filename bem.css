@@ -1,0 +1,202 @@
+* {
+  margin: 1;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 100%, 74%);
+  /* background: url() repeat center fixed; */
+}
+
+html,
+body,
+main {
+  height: 100%;
+  font-family: "poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+  /* width: 100%; */
+}
+.container .content {
+  display: flex;
+  justify-content: space-between;
+}
+.container .content .words {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.container .content .words p {
+  color: white;
+  font-size: 17px;
+}
+.container .content .form {
+  margin: 0 2rem;
+  flex: 1;
+}
+.container .content .form .advert {
+  padding: 18px 2rem;
+  background: hsl(248, 32%, 49%);
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 5px 10px 18px #888888;
+  margin-bottom: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+.container .content .form .advert p {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.container .content .form .advert p span {
+  font-size: 15px;
+  font-weight: 300;
+}
+.container .content .form .Contact {
+  display: flex;
+  padding: 2.4rem;
+  background: white;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 10px 18px #888888;
+}
+.container .content .form .Contact .input-control {
+  width: 100%;
+  position: relative;
+}
+.container .content .form .Contact .input-control input {
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 7px;
+  width: 100%;
+  color: white;
+  padding: 15px 2rem;
+  border: 1px solid grey;
+  margin-bottom: 1.3rem;
+  margin-top: 0.7rem;
+}
+.container .content .form .contact .input-control input:focus:invalid ~ .error {
+  position: relative;
+  margin: 1.5rem;
+}
+.container .cnt .form .contact-form .input-control input:focus {
+  border: 1px solid purple;
+}
+
+.container .content .form .contact .input-control input:focus:invalid {
+  background: url(https://res.cloudinary.com/liquidtime/image/upload/v1655385615/icon-error_c5vzyr.svg)
+    no-repeat 95% 50%;
+  background-size: 25px;
+  border: 2px solid red;
+  transition: border 10ms;
+}
+
+.container
+  .content
+  .form
+  .contact
+  .input-control
+  input:focus:invalid
+  ~ .error::after {
+  content: attr(data-error);
+  position: absolute;
+  bottom: 0;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  right: 0;
+  padding-bottom: 1rem;
+  color: red;
+}
+.container .content .form .Contact .btn {
+  width: 100%;
+  background: hsl(154, 59%, 51%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border-bottom: 3px solid;
+  margin-bottom: 1.3rem;
+  margin-top: 1.3rem;
+}
+.container .content .form .Contact .btn #Submit {
+  background: none;
+  font-weight: 600;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  cursor: pointer;
+}
+.container .content .form .Contact .btn:hover,
+.container .content .form .Contact .btn:active {
+  opacity: 0.6;
+  transition: var(--trans);
+}
+.container .content .form .footer {
+  display: flex;
+  justify-content: center;
+}
+.container .content .form .Footer p {
+  font-size: 12px;
+  font-weight: 500px;
+  color: #d6cece;
+}
+.container .content .form .Footer p span {
+  color: rgb(197, 43, 43);
+  font-weight: 700;
+}
+@media (max-width: 950px) {
+  .container .content {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container .content .words {
+    text-align: center;
+  }
+  .container .content .words h2 {
+    font-size: 2.3rem;
+  }
+  .container .content .words p {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 0 2rem;
+    transition: var(--trans);
+  }
+  .form {
+    margin: 30px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .container {
+    padding: 0 10px;
+    transition: var(--trans);
+  }
+}
+.form {
+  margin: 30px;
+}
+.container .content .words p {
+  margin: 30px;
+  display: flex;
+}
